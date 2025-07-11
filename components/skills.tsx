@@ -16,7 +16,7 @@ export default function Skills() {
         { name: "React", level: 85 },
         { name: "JavaScript", level: 95 },
         { name: "TypeScript", level: 88 },
-        // { name: "TypeScript", level: 85 },
+        { name: "TypeScript", level: 85 },
         { name: "HTML/CSS", level: 90 },
         { name: "Next.js", level: 90 },
         { name: "TailwindCSS", level: 88 },
@@ -34,7 +34,8 @@ export default function Skills() {
         { name: "MongoDB", level: 80 },
         { name: "SQL", level: 70 },
         { name: "LLM/OpenAI API", level: 90 },
-        
+        { name: "PostgreSQL", level: 80 },
+
       ],
       icon: "/images/fire-flower.png",
     },
@@ -48,6 +49,7 @@ export default function Skills() {
         { name: "Postman", level: 80 },
         { name: "UI/UX Design", level: 70 },
         { name: "Agile/Scrum", level: 80 },
+        { name: "Obsidian", level: 80 },
       ],
       icon: "/images/star.png",
     },
@@ -164,7 +166,7 @@ export default function Skills() {
 
           <div className="absolute bottom-0 left-0 right-0 h-4 bg-mario-green/30 rounded-full" />
         </motion.div>
-        
+
       </div>
     </div>
   )
