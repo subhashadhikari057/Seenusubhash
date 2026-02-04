@@ -152,8 +152,8 @@ export const PROJECTS: IProject[] = [
       </ul>
       `,
         techStack: ['Next.js', 'Nest.Js', 'Tailwind CSS', 'Prisma'],
-        thumbnail: '/projects/thumbnail/shopit.png',
-        longThumbnail: '/projects/thumbnail/shopit.png',
+        thumbnail: '/projects/images/shopit.png',
+        longThumbnail: '/projects/images/shopit.png',
         images: [
             '/projects/images/shopit2.png',
             '/projects/images/shopit1.png',
