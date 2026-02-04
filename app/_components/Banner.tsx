@@ -118,7 +118,7 @@ const Banner = () => {
                     </Button>
                 </div>
 
-                <StackedCards className="max-md:mt-8 max-md:mb-20 md:-translate-x-8 md:translate-y-12" />
+                <StackedCards className="hidden md:block md:-translate-x-8 md:translate-y-12" />
 
                 <div className="md:absolute bottom-[10%] right-[4%] flex md:flex-col gap-4 md:gap-8 text-center md:text-right">
                     <div className="slide-up-and-fade">
