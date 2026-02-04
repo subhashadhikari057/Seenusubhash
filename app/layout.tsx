@@ -81,6 +81,9 @@ export const metadata: Metadata = {
         description:
             'Backend-focused full stack engineer from Nepal building scalable, production-ready web applications with clean APIs, robust backend systems, and real-world project experience.',
     },
+    verification: {
+        google: 'Hneo84Qb0J9k5MFw1yyS-iKL6ebD5bTXqZYjfSTbmXQ',
+    },
     authors: [{ name: 'Subhash Adhikari', url: 'https://subhashadhikari.dev' }],
     creator: 'Subhash Adhikari',
     publisher: 'Subhash Adhikari',
