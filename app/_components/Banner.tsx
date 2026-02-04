@@ -6,6 +6,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import React from 'react';
+import StackedCards from './StackedCards';
 
 const ACCENT_THEMES = [
     { primary: '0 87% 57%', foreground: '0 0% 10%' },
@@ -85,7 +86,7 @@ const Banner = () => {
                 className="container h-[100svh] min-h-[530px] max-md:pb-10 flex justify-between items-center max-md:flex-col"
                 ref={containerRef}
             >
-                <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[544px]">
+                <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[544px] md:ml-[-24px]">
                     <h1
                         className="banner-title slide-up-and-fade leading-[.95] text-6xl sm:text-[80px] font-anton cursor-pointer focus:outline-none focus-visible:outline-none"
                         onClick={handleAccentCycle}
@@ -117,18 +118,7 @@ const Banner = () => {
                     </Button>
                 </div>
 
-                {/*<div className="relative shrink-0 max-md:my-10">
-                    <div className="relative w-[220px] h-[220px] sm:w-[260px] sm:h-[260px] lg:w-[320px] lg:h-[320px] overflow-hidden rounded-full border border-border bg-background-light">
-                        <Image
-                            src="/profile.png"
-                            alt="Subhash Adhikari"
-                            fill
-                            sizes="(min-width: 1024px) 320px, (min-width: 640px) 260px, 220px"
-                            className="object-cover grayscale"
-                            priority
-                        />
-                    </div>
-                </div>*/}
+                <StackedCards className="max-md:mt-8 max-md:mb-20 md:-translate-x-8 md:translate-y-12" />
 
                 <div className="md:absolute bottom-[10%] right-[4%] flex md:flex-col gap-4 md:gap-8 text-center md:text-right">
                     <div className="slide-up-and-fade">
