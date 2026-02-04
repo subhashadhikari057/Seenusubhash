@@ -101,13 +101,12 @@ export const MY_STACK = {
         {
             name: 'Postman',
             icon: '/logo/postman.png',
-            size: 80,
+            size: 70,
         },
         {
             name: 'Swagger',
-            icon: '/logo/swagger.png',
-            size: 80,
-        },
+            icon: '/logo/swagger.png', 
+            size: 90,},
     ],
 };
 
@@ -151,7 +150,7 @@ export const PROJECTS: IProject[] = [
 
       </ul>
       `,
-        techStack: ['Next.js', 'Nest.Js', 'Tailwind CSS', 'Prisma'],
+        techStack: ['Next.js', 'Nest.Js','PostgresQL', 'Tailwind CSS'],
         thumbnail: '/projects/images/shopit.png',
         longThumbnail: '/projects/images/shopit.png',
         images: [
@@ -165,8 +164,8 @@ export const PROJECTS: IProject[] = [
         techStack: [
             'Next.js',
             'Nest.Js',
+            'PostgresQL',
             'Tailwind CSS',
-            'Prisma',
             'Web-Sockets',
             'Api Integration',
         ],

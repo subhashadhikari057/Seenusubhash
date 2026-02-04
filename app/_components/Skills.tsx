@@ -73,7 +73,7 @@ const Skills = () => {
 
                             <div
                                 className={`sm:col-span-7 flex gap-y-9 flex-wrap ${
-                                    key === 'tools' ? 'gap-x-8' : 'gap-x-11'
+                                    key === 'tools' ? 'gap-x-6' : 'gap-x-11'
                                 }`}
                             >
                                 {value.map((item) => {
@@ -96,7 +96,13 @@ const Skills = () => {
                                                     className="h-auto"
                                                 />
                                             </div>
-                                            <span className="text-2xl capitalize">
+                                            <span
+                                                className={`capitalize ${
+                                                    key === 'tools'
+                                                        ? 'text-xl'
+                                                        : 'text-2xl'
+                                                }`}
+                                            >
                                                 {item.name}
                                             </span>
                                         </div>
@@ -125,7 +131,7 @@ const Skills = () => {
                             </div>
                             <div
                                 className={`sm:col-span-7 flex gap-y-9 flex-wrap ${
-                                    key === 'tools' ? 'gap-x-8' : 'gap-x-11'
+                                    key === 'tools' ? 'gap-x-6' : 'gap-x-11'
                                 }`}
                             >
                                 {value.map((item) => {
@@ -146,7 +152,13 @@ const Skills = () => {
                                                 height={iconSize}
                                                 className="h-auto"
                                             />
-                                            <span className="text-2xl capitalize">
+                                            <span
+                                                className={`capitalize ${
+                                                    key === 'tools'
+                                                        ? 'text-xl'
+                                                        : 'text-2xl'
+                                                }`}
+                                            >
                                                 {item.name}
                                             </span>
                                         </div>
