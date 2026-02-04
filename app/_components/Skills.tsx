@@ -72,8 +72,10 @@ const Skills = () => {
                             </div>
 
                             <div
-                                className={`sm:col-span-7 flex gap-y-9 flex-wrap ${
-                                    key === 'tools' ? 'gap-x-6' : 'gap-x-11'
+                                className={`sm:col-span-7 ${
+                                    key === 'tools'
+                                        ? 'grid grid-cols-2 gap-x-6 gap-y-8 sm:flex sm:flex-wrap sm:gap-y-9 sm:gap-x-6'
+                                        : 'flex gap-y-9 flex-wrap gap-x-11'
                                 }`}
                             >
                                 {value.map((item) => {
@@ -130,8 +132,10 @@ const Skills = () => {
                                 </p>
                             </div>
                             <div
-                                className={`sm:col-span-7 flex gap-y-9 flex-wrap ${
-                                    key === 'tools' ? 'gap-x-6' : 'gap-x-11'
+                                className={`sm:col-span-7 ${
+                                    key === 'tools'
+                                        ? 'grid grid-cols-2 gap-x-6 gap-y-8 sm:flex sm:flex-wrap sm:gap-y-9 sm:gap-x-6'
+                                        : 'flex gap-y-9 flex-wrap gap-x-11'
                                 }`}
                             >
                                 {value.map((item) => {

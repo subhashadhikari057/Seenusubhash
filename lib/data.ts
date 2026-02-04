@@ -58,8 +58,7 @@ export const MY_STACK = {
         },
         {
             name: 'Spring Boot',
-            icon: '/logo/spring.png',
-            size: 50,
+            icon: '/logo/spring.svg',
         },
     ],
     database: [
@@ -100,13 +99,13 @@ export const MY_STACK = {
         },
         {
             name: 'Postman',
-            icon: '/logo/postman.png',
-            size: 70,
+            icon: '/logo/postman.svg',
         },
         {
             name: 'Swagger',
-            icon: '/logo/swagger.png', 
-            size: 90,},
+            icon: '/logo/swagger.svg', 
+            
+        },
     ],
 };
 
