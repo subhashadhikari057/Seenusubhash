@@ -7,10 +7,55 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import React from 'react';
 
+const ACCENT_THEMES = [
+    { primary: '0 87% 57%', foreground: '0 0% 10%' },
+    { primary: '198 100% 50%', foreground: '0 0% 10%' },
+    { primary: '12 100% 55%', foreground: '0 0% 10%' },
+    { primary: '42 98% 60%', foreground: '0 0% 10%' },
+    { primary: '127 55% 37%', foreground: '0 0% 95%' },
+];
+
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const Banner = () => {
     const containerRef = React.useRef<HTMLDivElement>(null);
+    const [accentIndex, setAccentIndex] = React.useState(0);
+
+    const applyAccentTheme = (index: number) => {
+        const theme = ACCENT_THEMES[index];
+        if (!theme) return;
+
+        document.documentElement.style.setProperty('--primary', theme.primary);
+        document.documentElement.style.setProperty(
+            '--primary-foreground',
+            theme.foreground,
+        );
+    };
+
+    React.useEffect(() => {
+        const savedIndex = Number(localStorage.getItem('accentIndex'));
+        const safeIndex = Number.isNaN(savedIndex)
+            ? 0
+            : Math.min(Math.max(savedIndex, 0), ACCENT_THEMES.length - 1);
+
+        applyAccentTheme(safeIndex);
+        setAccentIndex(safeIndex);
+    }, []);
+
+    const handleAccentCycle = () => {
+        const nextIndex = (accentIndex + 1) % ACCENT_THEMES.length;
+        applyAccentTheme(nextIndex);
+        setAccentIndex(nextIndex);
+        localStorage.setItem('accentIndex', String(nextIndex));
+    };
+
+    const handleAccentKeyDown =
+        (event: React.KeyboardEvent<HTMLHeadingElement>) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                handleAccentCycle();
+            }
+        };
 
     // move the content a little up on scroll
     useGSAP(
@@ -41,7 +86,14 @@ const Banner = () => {
                 ref={containerRef}
             >
                 <div className="max-md:grow max-md:flex flex-col justify-center items-start max-w-[544px]">
-                    <h1 className="banner-title slide-up-and-fade leading-[.95] text-6xl sm:text-[80px] font-anton">
+                    <h1
+                        className="banner-title slide-up-and-fade leading-[.95] text-6xl sm:text-[80px] font-anton cursor-pointer focus:outline-none focus-visible:outline-none"
+                        onClick={handleAccentCycle}
+                        onKeyDown={handleAccentKeyDown}
+                        role="button"
+                        tabIndex={0}
+                        title="Click to change accent color"
+                    >
                         <span className="block text-primary">FULL STACK</span>
                         <span className="block ml-4">DEVELOPER</span>
                     </h1>
