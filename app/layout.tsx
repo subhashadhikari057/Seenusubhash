@@ -84,6 +84,25 @@ export const metadata: Metadata = {
     verification: {
         google: 'Hneo84Qb0J9k5MFw1yyS-iKL6ebD5bTXqZYjfSTbmXQ',
     },
+    icons: {
+        icon: [
+            {
+                url: '/favicon/favicon-16x16.png',
+                sizes: '16x16',
+                type: 'image/png',
+            },
+            {
+                url: '/favicon/favicon-32x32.png',
+                sizes: '32x32',
+                type: 'image/png',
+            },
+            { url: '/favicon/favicon.ico' },
+        ],
+        apple: [
+            { url: '/favicon/apple-touch-icon.png', sizes: '180x180' },
+        ],
+    },
+    manifest: '/favicon/site.webmanifest',
     authors: [{ name: 'Subhash Adhikari', url: 'https://subhashadhikari.dev' }],
     creator: 'Subhash Adhikari',
     publisher: 'Subhash Adhikari',
