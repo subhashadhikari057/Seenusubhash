@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: BASE_URL,
             lastModified: new Date(),
-            changeFrequency: 'monthly' as const,
+            changeFrequency: 'weekly' as const,
             priority: 1,
         },
         ...projectUrls,
