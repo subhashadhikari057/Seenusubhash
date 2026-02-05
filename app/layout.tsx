@@ -30,7 +30,7 @@ const robotoFlex = Roboto_Flex({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://subhashadhikari.dev'),
+    metadataBase: new URL('https://www.subhashadhikari.dev'),
     title: {
         default:
             'Backend Focused Full Stack Engineer | Scalable Web Applications',
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         type: 'website',
-        url: 'https://subhashadhikari.dev',
+        url: 'https://www.subhashadhikari.dev',
         title: 'Backend Focused Full Stack Engineer | Scalable Web Applications',
         description:
             'Backend-focused full stack engineer from Nepal building scalable, production-ready web applications with clean APIs, robust backend systems, and real-world project experience.',
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
         apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
     },
     manifest: '/site.webmanifest',
-    authors: [{ name: 'Subhash Adhikari', url: 'https://subhashadhikari.dev' }],
+    authors: [{ name: 'Subhash Adhikari', url: 'https://www.subhashadhikari.dev' }],
     creator: 'Subhash Adhikari',
     publisher: 'Subhash Adhikari',
 };
@@ -130,7 +130,7 @@ export default function RootLayout({
         name: 'Subhash Adhikari',
         alternateName: ['Subhash Seenu'],
         jobTitle: 'Backend Focused Full Stack Engineer',
-        url: 'https://subhashadhikari.dev',
+        url: 'https://www.subhashadhikari.dev',
         sameAs: sameAsLinks,
         address: {
             '@type': 'PostalAddress',
@@ -152,7 +152,7 @@ export default function RootLayout({
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         name: 'Subhash Adhikari',
-        url: 'https://subhashadhikari.dev',
+        url: 'https://www.subhashadhikari.dev',
         description:
             'Backend-focused full stack engineer from Nepal building scalable, production-ready web applications with clean APIs, robust backend systems, and real-world project experience.',
         inLanguage: 'en-US',

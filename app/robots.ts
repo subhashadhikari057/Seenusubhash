@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        host: 'https://subhashadhikari.dev',
-        sitemap: 'https://subhashadhikari.dev/sitemap.xml',
+        host: 'https://www.subhashadhikari.dev',
+        sitemap: 'https://www.subhashadhikari.dev/sitemap.xml',
     };
 }
