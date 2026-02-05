@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+    <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#121212" />
+            <stop offset="100%" stop-color="#1b1b1b" />
+        </linearGradient>
+    </defs>
+    <rect width="1200" height="630" fill="url(#bg)" />
+    <circle cx="980" cy="140" r="140" fill="#F13030" opacity="0.18" />
+    <circle cx="1020" cy="520" r="180" fill="#F13030" opacity="0.12" />
+    <text
+        x="80"
+        y="220"
+        fill="#F2F2F2"
+        font-family="SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace"
+        font-size="54"
+        font-weight="600"
+    >
+        Subhash Adhikari
+    </text>
+    <text
+        x="80"
+        y="310"
+        fill="#BDBDBD"
+        font-family="SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace"
+        font-size="32"
+    >
+        Backend-focused Full Stack Engineer
+    </text>
+    <text
+        x="80"
+        y="370"
+        fill="#BDBDBD"
+        font-family="SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace"
+        font-size="24"
+    >
+        Scalable web applications • REST APIs • System design
+    </text>
+</svg>

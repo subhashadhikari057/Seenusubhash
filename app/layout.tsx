@@ -9,7 +9,7 @@ import ScrollProgressIndicator from '@/components/ScrollProgressIndicator';
 import ParticleBackground from '@/components/ParticleBackground';
 import Navbar from '@/components/Navbar';
 import CustomCursor from '@/components/CustomCursor';
-import Preloader from '../components/Preloader';
+import PreloaderGate from '@/components/PreloaderGate';
 import StickyEmail from './_components/StickyEmail';
 import { GENERAL_INFO, SOCIAL_LINKS } from '@/lib/data';
 import { GoogleAnalytics } from '@next/third-parties/google';
@@ -29,15 +29,19 @@ const robotoFlex = Roboto_Flex({
     variable: '--font-roboto-flex',
 });
 
+const siteName = 'Subhash Adhikari | Full Stack Developer';
+const siteUrl = 'https://www.subhashadhikari.dev';
+const description =
+    'Backend-focused full stack engineer from Nepal building scalable, production-ready web applications with clean APIs, robust backend systems, and real-world project experience.';
+const ogImage = `${siteUrl}/profile.png`;
+
 export const metadata: Metadata = {
-    metadataBase: new URL('https://www.subhashadhikari.dev'),
+    metadataBase: new URL(siteUrl),
     title: {
-        default:
-            'Backend Focused Full Stack Engineer | Scalable Web Applications',
+        default: siteName,
         template: '%s | Subhash Adhikari',
     },
-    description:
-        'Backend-focused full stack engineer from Nepal building scalable, production-ready web applications with clean APIs, robust backend systems, and real-world project experience.',
+    description,
     keywords: [
         'Subhash Adhikari',
         'Subhash Seenu',
@@ -63,23 +67,41 @@ export const metadata: Metadata = {
         'Tailwind CSS',
         'Full Stack JavaScript Developer',
     ],
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-snippet': -1,
+            'max-image-preview': 'large',
+            'max-video-preview': -1,
+        },
+    },
     alternates: {
-        canonical: '/',
+        canonical: siteUrl,
     },
     openGraph: {
         type: 'website',
-        url: 'https://www.subhashadhikari.dev',
-        title: 'Backend Focused Full Stack Engineer | Scalable Web Applications',
-        description:
-            'Backend-focused full stack engineer from Nepal building scalable, production-ready web applications with clean APIs, robust backend systems, and real-world project experience.',
+        url: siteUrl,
+        title: siteName,
+        description,
         siteName: 'Subhash Adhikari',
         locale: 'en_US',
+        images: [
+            {
+                url: ogImage,
+                width: 1200,
+                height: 630,
+                alt: 'Subhash Adhikari - Full Stack Developer',
+            },
+        ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Backend Focused Full Stack Engineer | Scalable Web Applications',
-        description:
-            'Backend-focused full stack engineer from Nepal building scalable, production-ready web applications with clean APIs, robust backend systems, and real-world project experience.',
+        title: siteName,
+        description,
+        images: [ogImage],
     },
     verification: {
         google: 'Hneo84Qb0J9k5MFw1yyS-iKL6ebD5bTXqZYjfSTbmXQ',
@@ -101,9 +123,10 @@ export const metadata: Metadata = {
         apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
     },
     manifest: '/site.webmanifest',
-    authors: [{ name: 'Subhash Adhikari', url: 'https://www.subhashadhikari.dev' }],
+    authors: [{ name: 'Subhash Adhikari', url: siteUrl }],
     creator: 'Subhash Adhikari',
     publisher: 'Subhash Adhikari',
+    category: 'Portfolio',
 };
 
 export default function RootLayout({
@@ -112,16 +135,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     const sameAsLinks = Array.from(
-        new Set(
-            [
-                ...SOCIAL_LINKS.map((link) => link.url),
-                GENERAL_INFO.email,
-                 SOCIAL_LINKS.find((link) => link.name === 'linkedin')?.url,
-                 SOCIAL_LINKS.find((link) => link.name === 'github')?.url,
-                 SOCIAL_LINKS.find((link) => link.name === 'instagram')?.url,
-            
-            ].filter(Boolean),
-        ),
+        new Set(SOCIAL_LINKS.map((link) => link.url).filter(Boolean)),
     );
 
     const personJsonLd = {
@@ -130,7 +144,9 @@ export default function RootLayout({
         name: 'Subhash Adhikari',
         alternateName: ['Subhash Seenu'],
         jobTitle: 'Backend Focused Full Stack Engineer',
-        url: 'https://www.subhashadhikari.dev',
+        url: siteUrl,
+        image: ogImage,
+        email: GENERAL_INFO.email,
         sameAs: sameAsLinks,
         address: {
             '@type': 'PostalAddress',
@@ -152,9 +168,8 @@ export default function RootLayout({
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         name: 'Subhash Adhikari',
-        url: 'https://www.subhashadhikari.dev',
-        description:
-            'Backend-focused full stack engineer from Nepal building scalable, production-ready web applications with clean APIs, robust backend systems, and real-world project experience.',
+        url: siteUrl,
+        description,
         inLanguage: 'en-US',
     };
 
@@ -209,7 +224,7 @@ export default function RootLayout({
                     <Footer />
 
                     <CustomCursor />
-                    <Preloader />
+                    <PreloaderGate />
                     <ScrollProgressIndicator />
                     <ParticleBackground />
                     <StickyEmail />
