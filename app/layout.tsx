@@ -29,7 +29,7 @@ const robotoFlex = Roboto_Flex({
     variable: '--font-roboto-flex',
 });
 
-const siteName = 'Subhash Adhikari | Full Stack Developer';
+const siteName = 'Subhash Adhikari | Backend Focused Full Stack Engineer';
 const siteUrl = 'https://www.subhashadhikari.dev';
 const description =
     'Backend-focused full stack engineer from Nepal building scalable, production-ready web applications with clean APIs, robust backend systems, and real-world project experience.';

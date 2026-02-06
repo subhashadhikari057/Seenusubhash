@@ -57,6 +57,15 @@
 }
 
 @layer utilities {
+    html.editorial-hover #cursor {
+        opacity: 0 !important;
+    }
+
+    html.editorial-hover .sticky-email {
+        opacity: 0;
+        pointer-events: none;
+    }
+
     .font-sf-mono {
         font-family: "SF Mono", "SFMono-Regular", Menlo, Monaco, Consolas,
             "Liberation Mono", "Courier New", monospace;
@@ -76,5 +85,18 @@
 
     .animate-card-rise {
         animation: card-rise 520ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes editorial-marquee {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .animate-editorial-marquee {
+        animation: editorial-marquee 10s linear infinite;
     }
 }
