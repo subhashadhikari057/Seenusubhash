@@ -39,7 +39,7 @@ export const MY_STACK = {
             icon: '/logo/tailwind.png',
         },
         {
-            name: 'Framer Motion',
+            name: 'Motion',
             icon: '/logo/framer-motion.png',
         },
     ],
@@ -155,6 +155,40 @@ export const PROJECTS: IProject[] = [
         images: [
             '/projects/images/shopit2.png',
             '/projects/images/shopit1.png',
+        ],
+    },
+    {
+        title: 'Spring Boot Modular Monolith Boilerplate',
+        slug: 'spring-boot-modular-monolith',
+        year: 2026,
+        sourceCode: 'https://github.com/subhashadhikari057/springboot-modular-monolith-boilerplate',
+        description: `Built a production-leaning Spring Boot modular-monolith backend with PostgreSQL (source of truth), Redis (low-latency caching), RabbitMQ, and Mailpit, fully containerized via Docker Compose.
+
+        <br/><br/>
+        Implemented secure cookie-based auth (sid/rid) with refresh-token rotation, Redis-first session validation with DB fallback, immediate session revocation on role/status/password changes, RBAC (roles + fine-grained permissions), and separate API surfaces/docs for Admin and Mobile consumers.
+
+        <br/><br/>
+        Added reusable Redis-backed rate limiting (policy-based, env configurable), comprehensive audit logging (auth/admin/security events with actor/resource/result/request correlation), paginated audit query APIs for admin and user-self views, and scheduled retention cleanup (batch deletes, cron + TTL configurable).
+
+        <br/><br/>
+        Enforced migration-driven schema governance with Flyway baselines, hardened error handling for correct 401/403/429/5xx semantics, and documented frontend integration patterns and engineering standards for scalable team development.
+        `,
+        role: 'Backend Developer',
+        techStack: [
+            'Spring Boot',
+            'PostgreSQL',
+            'Redis',
+            'RabbitMQ',
+            'Mailpit',
+            'Docker Compose',
+        ],
+        thumbnail: '/projects/thumbnail/spring-boot-modular-monolith.png',
+        longThumbnail: '/projects/long/spring-boot-modular-monolith.png',
+        images: [
+            '/projects/images/spring-boot-modular-monolith-4.png',
+            '/projects/images/spring-boot-modular-monolith-1.png',
+            '/projects/images/spring-boot-modular-monolith-2.png',
+            '/projects/images/spring-boot-modular-monolith-3.png',
         ],
     },
     {

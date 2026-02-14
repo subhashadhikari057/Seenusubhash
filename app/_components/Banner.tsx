@@ -101,7 +101,7 @@ const Banner = () => {
                     <p className="banner-description slide-up-and-fade mt-6 text-lg text-muted-foreground">
                         Hi! I&apos;m{' '}
                         <span className="font-medium text-foreground">
-                            Subhash
+                            Subhash Adhikari
                         </span>
                         . A backend-focused full stack engineer with 1+ years of
                         experience building scalable, high-performance web

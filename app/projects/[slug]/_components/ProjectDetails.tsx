@@ -114,9 +114,28 @@ const ProjectDetails = ({ project }: Props) => {
                                         href={project.sourceCode}
                                         target="_blank"
                                         rel="noreferrer noopener"
-                                        className="hover:text-primary"
+                                        className="group relative inline-flex items-center justify-center size-12 rounded-full border border-border/70 bg-background/70 text-foreground transition-all hover:border-primary hover:text-primary"
                                     >
-                                        <Github size={30} />
+                                        <span className="absolute inset-0 rounded-full border border-primary/30" />
+                                        <svg
+                                            className="absolute inset-0 size-full -rotate-90 pointer-events-none"
+                                            viewBox="0 0 48 48"
+                                        >
+                                            <circle
+                                                className="ring-draw"
+                                                cx="24"
+                                                cy="24"
+                                                r="21"
+                                                fill="none"
+                                                stroke="hsl(var(--primary))"
+                                                strokeOpacity="0.7"
+                                                strokeWidth="2"
+                                                strokeDasharray="132"
+                                                strokeDashoffset="132"
+                                            />
+                                        </svg>
+                                        <span className="absolute inset-0 rounded-full opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-60 bg-primary/30" />
+                                        <Github size={28} className="relative" />
                                     </a>
                                 )}
                                 {project.liveUrl && (
